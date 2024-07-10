@@ -1,13 +1,20 @@
 import express, { json } from "express";
 import cors from "cors";
-import { PORT, DATABASE_URL } from "./config.js";
+
 import bookRouter from "./routes/bookRoute.js";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 
 // app.use(cors()); // cross platform communication is allowed default way
 // 2.allow custom origin
+const DATABASE_URL = process.env.DATABASE_URL;
+const PORT = process.env.PORT;
+
+console.log(PORT);
+console.log(DATABASE_URL);
 
 app.use(
   cors({

@@ -10,10 +10,12 @@ const ShowBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:8000/books/${id}`).then((response) => {
-      setBook(response.data);
-      setLoading(false);
-    });
+    axios
+      .get(`https://mern-book-backend-felg.onrender.com/books/${id}`)
+      .then((response) => {
+        setBook(response.data);
+        setLoading(false);
+      });
   }, []);
 
   console.log(book);

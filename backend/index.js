@@ -26,6 +26,10 @@ app.use(
 
 app.use(express.json()); // to format json data
 app.use("/books", bookRouter);
+
+app.get("/", (req, res) => {
+  res.send({ success: "Backend is sucsess" });
+});
 mongoose
   .connect(DATABASE_URL)
   .then(() => {

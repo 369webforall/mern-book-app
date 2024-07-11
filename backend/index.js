@@ -18,7 +18,7 @@ console.log(DATABASE_URL);
 
 app.use(
   cors({
-    origin: ["https://mern-book-frontend.onrender.com/"],
+    origin: ["https://mern-book-app-5skh.onrender.com"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
